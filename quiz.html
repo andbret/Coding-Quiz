@@ -8,17 +8,38 @@
 </head>
 <body>
     <!-- <p id="demo"></p> -->
-  <h2>Countdown: <span id="timer">5</span></h2>
-  <p id="demo"></p>
-  <button id="buttona" type="button" class="btn btn-primary" ></button>
-  <button type="button" class="btn btn-primary" id="buttonb" ></button>
-  <button type="button" class="btn btn-primary" id="buttonc" ></button>
-  <button type="button" class="btn btn-primary" id="buttond"  ></button>
-  <button type="button" class="btn btn-secondary" onclick="renderQuestion()">start</button>
+    <div class="col-md-12 text-center"id="begin">
+    <h1 id="begin2"> Coding Quiz Challenge</h1>
+    <p id="begin3"> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds</p>
+ 
+        <button type="button"  class="btn btn-secondary" id="begin" onclick="renderQuestion()">start</button>
+      </div>
+  <h3>Countdown: <span id="timer">5</span></h3>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-0"></div>
+    <div class="col-md-4 col-sm-4 col-xs-0">
+  <h2 id="demo"></h2>
+  <div class="row">
+  <button type="button" class="btn btn-primary" id="buttonA" ></button>
+</div>
+  <div class="row">
+  <button type="button" class="btn btn-primary" id="buttonB" ></button>
+</div>
+<div class="row">
+  <button type="button" class="btn btn-primary" id="buttonC" ></button>
+</div>
+<div class="row">
+  <button type="button" class="btn btn-primary" id="buttonD" ></button>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-0"></div>
+</div>
+</div>
+</div>
 
-  <p id=theAnswer></p>
+  
+  <!-- <p id=theAnswer></p> -->
   <script src="quiz.js"></script>
-  <!-- <script type="text/javascript" src="test.js"></script> -->
 
 </body>
 </html>
