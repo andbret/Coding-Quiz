@@ -1,45 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
- 
-  <title>Java Quiz</title>
-</head>
-<body>
-    <!-- <p id="demo"></p> -->
-    <div class="col-md-12 text-center"id="begin">
-    <h1 id="begin2"> Coding Quiz Challenge</h1>
-    <p id="begin3"> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds</p>
- 
-        <button type="button"  class="btn btn-secondary" id="begin" onclick="renderQuestion()">start</button>
-      </div>
-  <h3>Countdown: <span id="timer">5</span></h3>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-4 col-xs-0"></div>
-    <div class="col-md-4 col-sm-4 col-xs-0">
-  <h2 id="demo"></h2>
-  <div class="row">
-  <button type="button" class="btn btn-primary" id="buttonA" ></button>
-</div>
-  <div class="row">
-  <button type="button" class="btn btn-primary" id="buttonB" ></button>
-</div>
-<div class="row">
-  <button type="button" class="btn btn-primary" id="buttonC" ></button>
-</div>
-<div class="row">
-  <button type="button" class="btn btn-primary" id="buttonD" ></button>
-</div>
-<div class="col-md-4 col-sm-4 col-xs-0"></div>
-</div>
-</div>
-</div>
 
-  
-  <!-- <p id=theAnswer></p> -->
-  <script src="quiz.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Java Quiz</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"> Countdown: <span id="timer"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+                <h4>Score:<span id="score">
+                        0
+                    </span></h4>
+            </div>
+        </nav>
+    </header>
+    <!-- <p id="demo"></p> -->
+    <div class="col-md-12 text-center" id="begin">
+        <h1 id="begin2"> Coding Quiz Challenge</h1>
+        <p id="begin3"> Try to answer the following code-related questions within the time limit. Keep in mind that
+            incorrect answers will penalize your score time by ten seconds</p>
+
+        <button type="button" class="btn btn-secondary" id="begin" onclick="prepareRead()" onclick="renderQuestion()"
+            onclick="setInterval(myTimer, 60000);">start</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-0"></div>
+            <div class="col-md-6 col-sm-6 col-xs-0">
+                <h2 id="demo"></h2>
+                <div class="todos" id="formmmm">
+                    <form id="todo-form" method="POST">
+                        <label for="todo-text">Enter Initials:</label>
+                        <input type="text" placeholder="" name="todo-text" id="todo-text" />
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
+                
+                    <button type="button" class="btn btn-primary m-1" onClick="window.location.reload();" >Start again</button>
+                
+                    <p>Todo Count: <span id="todo-count">0</span></p>
+                    <ul id="todo-list"></ul>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-primary m-1" id="buttonA" disabled></button>
+
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-primary m-1" id="buttonB" disabled></button>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-primary m-1" id="buttonC" disabled></button>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-primary m-1" id="buttonD" disabled></button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-0"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <p id=theAnswer></p> -->
+    <script src="quiz.js"></script>
 
 </body>
+
 </html>
