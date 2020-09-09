@@ -10,57 +10,63 @@
 </head>
 
 <body>
+    <!-- start of nav bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand nav-link text-info" href="test.html">View Highscores </a>
+            <!-- link to see high scores screen -->
+            <a class="navbar-brand nav-link text-info" href="highscores.html">View Highscores </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- sets the other text to the right -->
             <div class="collapse navbar-collapse" id="navbarText">
- 
-                <ul class="navbar-nav mr-auto">
 
-                </ul>
- 
-                <a>Score:<span id="score">
-                        0 
-                    </span></a>
-                    <a> &nbsp;&nbsp;&nbsp;</a>
-                    <a>Countdown:<span id="timer">
-                        0
-                    </span></a>
+                <ul class="navbar-nav mr-auto"></ul>
+                <!-- displays the score -->
+                <a>Score:<span id="score">0 </span></a>
+                <!-- creates a space -->
+                <a> &nbsp;&nbsp;&nbsp;</a>
+                <!-- displays the countdown -->
+                <a>Countdown:<span id="timer">0</span></a>
             </div>
         </nav>
     </header>
-    <!-- <p id="demo"></p> -->
+    <!-- content for the landing page -->
     <div class="col-md-12 text-center" id="begin">
         <h1 id="begin2"> Coding Quiz Challenge</h1>
         <p id="begin3"> Try to answer the following code-related questions within the time limit. Keep in mind that
             incorrect answers will penalize your score time by ten seconds</p>
-
+        <!-- button to start the game -->
         <button type="button" class="btn btn-secondary" id="begin" onclick="prepareRead()" onclick="renderQuestion()"
             onclick="setInterval(myTimer, 60000);">Start</button>
     </div>
+    <!-- content for the quiz -->
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-0"></div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <h2 id="demo"></h2>
-                <div class="todos" id="formmmm">
-                    <form id="todo-form" method="POST">
-                        <label for="todo-text">Enter Initials:</label>
-                        <input type="text" placeholder="" name="todo-text" id="todo-text" />
-                        <a type="submit" class="btn btn-primary mb-2" href="test.html" role="button">Submit</a>
-                        <!-- <button type="submit" class="btn btn-primary mb-2" href="test.html">Submit</button> -->
+            <div class="col-lg-3 md-3 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-6 md-6 col-sm-12 col-xs-12">
+                <!-- displays the title -->
+                <h2 id="questionTitle"></h2>
+                <!-- displays the form for submitting scores -->
+                <div class="scores" id="scoreForm">
+                    <form id="score-form" method="POST">
+                        <label for="score-text">Enter Initials:</label>
+                        <input type="text" placeholder="" name="score-text" id="score-text" />
+                        <!-- displays the button for submitting scores -->
+                        <button type="submit" class="btn btn-primary mb-2" role="button">Submit</button>
+
                     </form>
-                
-                    <button type="button" class="btn btn-primary mb-2" onClick="window.location.reload();" >Start again</button>
-                <div id="idk">
-                    <p>Todo Count: <span id="todo-count">0</span></p>
-                    <ul id="todo-list"></ul>
+                    <!-- resets the quiz -->
+                    <button type="button" class="btn btn-primary mb-2" onClick="window.location.reload();">Start
+                        again</button>
+                        <!-- this code needs to exist for the website to run, but otherwise shouldn't be seen so it is hidden -->
+                    <div id="bug">
+                        <p>score Count: <span id="score-count">0</span></p>
+                        <ul id="score-list"></ul>
+                    </div>
                 </div>
-                </div>
+                <!-- these are the buttons used for the quiz -->
                 <div class="row">
                     <button type="button" class="btn btn-primary m-1" id="buttonA" disabled></button>
 
@@ -77,14 +83,14 @@
                 <div class="row">
                     <button type="button" class="btn btn-primary m-1" id="buttonD" disabled></button>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-0"></div>
+                <div class="col-lg-3 md-3 col-sm-0 col-xs-0"></div>
             </div>
         </div>
     </div>
 
 
 
-    <!-- <p id=theAnswer></p> -->
+  <!-- javascript source -->
     <script src="quiz.js"></script>
 
 </body>
