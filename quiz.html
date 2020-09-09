@@ -33,12 +33,12 @@
         </nav>
     </header>
     <!-- content for the landing page -->
-    <div class="col-md-12 text-center" id="begin">
+    <div class="col-md-12 text-center">
         <h1 id="begin2"> Coding Quiz Challenge</h1>
         <p id="begin3"> Try to answer the following code-related questions within the time limit. Keep in mind that
             incorrect answers will penalize your score time by ten seconds</p>
         <!-- button to start the game -->
-        <button type="button" class="btn btn-secondary" id="begin" onclick="prepareRead()" onclick="renderQuestion()"
+        <button type="button" class="btn btn-secondary" id="begin" onclick="prepareRead(); renderQuestion()"
             onclick="setInterval(myTimer, 60000);">Start</button>
     </div>
     <!-- content for the quiz -->
@@ -54,7 +54,7 @@
                         <label for="score-text">Enter Initials:</label>
                         <input type="text" placeholder="" name="score-text" id="score-text" />
                         <!-- displays the button for submitting scores -->
-                        <button type="submit" class="btn btn-primary mb-2" role="button">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
 
                     </form>
                     <!-- resets the quiz -->
