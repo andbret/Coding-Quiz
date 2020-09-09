@@ -3,8 +3,6 @@ var scoreForm = document.querySelector("#score-form");
 var scoreList = document.querySelector("#score-list");
 var scoreCountSpan = document.querySelector("#score-count");
 
-var scores = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
-
 renderscores();
 
 
