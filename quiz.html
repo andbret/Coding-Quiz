@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand nav-link" href="test.html"> Highscores </a>
+            <a class="navbar-brand nav-link text-info" href="test.html">View Highscores </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,18 +40,19 @@
             incorrect answers will penalize your score time by ten seconds</p>
 
         <button type="button" class="btn btn-secondary" id="begin" onclick="prepareRead()" onclick="renderQuestion()"
-            onclick="setInterval(myTimer, 60000);">start</button>
+            onclick="setInterval(myTimer, 60000);">Start</button>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-0"></div>
-            <div class="col-md-6 col-sm-6 col-xs-0">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <h2 id="demo"></h2>
                 <div class="todos" id="formmmm">
                     <form id="todo-form" method="POST">
                         <label for="todo-text">Enter Initials:</label>
                         <input type="text" placeholder="" name="todo-text" id="todo-text" />
-                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                        <a type="submit" class="btn btn-primary mb-2" href="test.html" role="button">Submit</a>
+                        <!-- <button type="submit" class="btn btn-primary mb-2" href="test.html">Submit</button> -->
                     </form>
                 
                     <button type="button" class="btn btn-primary mb-2" onClick="window.location.reload();" >Start again</button>
