@@ -12,18 +12,24 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"> Countdown: <span id="timer"></span></a>
+            <a class="navbar-brand nav-link" href="test.html"> Highscores </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
+ 
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
-                <h4>Score:<span id="score">
+ 
+                <a>Score:<span id="score">
+                        0 
+                    </span></a>
+                    <a> &nbsp;&nbsp;&nbsp;</a>
+                    <a>Countdown:<span id="timer">
                         0
-                    </span></h4>
+                    </span></a>
             </div>
         </nav>
     </header>
@@ -48,10 +54,11 @@
                         <button type="submit" class="btn btn-primary mb-2">Submit</button>
                     </form>
                 
-                    <button type="button" class="btn btn-primary m-1" onClick="window.location.reload();" >Start again</button>
-                
+                    <button type="button" class="btn btn-primary mb-2" onClick="window.location.reload();" >Start again</button>
+                <div id="idk">
                     <p>Todo Count: <span id="todo-count">0</span></p>
                     <ul id="todo-list"></ul>
+                </div>
                 </div>
                 <div class="row">
                     <button type="button" class="btn btn-primary m-1" id="buttonA" disabled></button>

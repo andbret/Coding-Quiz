@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Java Quiz</title>
+</head>
+
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand nav-link" href="test.html"> Highscores </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+ 
+                <ul class="navbar-nav mr-auto">
 
-<h2>Create Object from JSON String</h2>
+                </ul>
+ 
+                <a>Score:<span id="score">
+                        0 
+                    </span></a>
+                    <a> &nbsp;&nbsp;&nbsp;</a>
+                    <a>Countdown:<span id="timer">
+                        0
+                    </span></a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1>High Scores:</h1>
+            <p id="todo-list"></p>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <a class="btn btn-primary" href="quiz.html" role="button">Go Back</a>
+            <button type="button" class="btn btn-primary" onClick="window.location.reload(); window.localStorage.clear();">Clear Score</button>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
 
-<p id="demo"></p>
 
-<script>
-var txt = '{"name":"John", "age":30, "city":"New York"}'
-var obj = JSON.parse(txt);
-document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
-</script>
+    <!-- <p id=theAnswer></p> -->
+    <script src="other.js"></script>
 
 </body>
+
 </html>
